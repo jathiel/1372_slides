@@ -15193,7 +15193,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Urn-problems">Urn problems<a class="anchor-link" href="#Urn-problems">&#182;</a></h2><p>Suppose you have an urn with 3 red balls and 4 black balls.</p>
+<h2 id="Urn-problems">Urn problems<a class="anchor-link" href="#Urn-problems">&#182;</a></h2><p>Suppose you have an urn with 1 red ball and 1 black ball.</p>
 <ol>
 <li><p>What is the probability that you draw a red ball after 1 draw?</p>
 </li>
@@ -15215,11 +15215,11 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Card-problems">Card problems<a class="anchor-link" href="#Card-problems">&#182;</a></h2><p>Suppose you have a standard deck of cards.</p>
 <ol>
-<li><p>What is the probability of drawing a face card (king, queen, jack) after 1 draw?</p>
+<li><p>What is the probability of drawing a face card (king, queen, jack, ace) after 1 draw?</p>
 </li>
 <li><p>What is the probability that you draw an even card or a club after 1 draw?</p>
 </li>
-<li><p>What is the probabilty that you draw two different colored suits after two draws without replacement?</p>
+<li><p>What is the probabilty that you draw a card that is strictly between 4 and 10?</p>
 </li>
 </ol>
 
@@ -15294,162 +15294,6 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
-</div></section></section><section ><section >
-<div id="cell-id=8dcf67db" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="A-single-winner">A single winner<a class="anchor-link" href="#A-single-winner">&#182;</a></h2><p>Suppose that two people play a game by flipping a fair coin each, simultaneously. Anyone that flips tails is eliminated from the game and the remaining players play another round until everyone is eliminated. What is the probability that in the final round before all players are eliminated, only one player was left?</p>
-<p>What if three people play this game?</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=18d078f1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="The-dreidel-game">The dreidel game<a class="anchor-link" href="#The-dreidel-game">&#182;</a></h2><p>How long does it take the <a href="https://en.wikipedia.org/wiki/Dreidel">dreidel</a> game to finish when there are 3 players that start with 10 chocolate coins?</p>
-
-</div>
-</div>
-</div>
-</div></section><section >
-<div id="cell-id=fe97f505" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://towardsdatascience.com/dreidel-analytics-moneyball-for-ancient-gambling-5a0142a11097">Simulations</a>!</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=6ad35e0f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Race-to-the-finish">Race to the finish<a class="anchor-link" href="#Race-to-the-finish">&#182;</a></h2><p>Are you more likely to win a prize or the zonk on <a href="https://www.youtube.com/watch?v=NJpWwhcKvHY">Race to the Finish</a>?</p>
-
-</div>
-</div>
-</div>
-</div></section><section ><div id="cell-id=dee25545" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="s1">&#39;8&#39;</span><span class="p">,</span><span class="s1">&#39;9&#39;</span><span class="p">,</span><span class="s1">&#39;10&#39;</span><span class="p">,</span><span class="s1">&#39;J&#39;</span><span class="p">,</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span><span class="s1">&#39;K&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
-<span class="n">suits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
-<span class="n">cards</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">suits</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">])</span>
-
-<span class="n">win_heart</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">win_spade</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">win_diamond</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">lose</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section ><div id="cell-id=7304075d" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
-    <span class="n">heart_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">spade_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">diamond_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">club_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">cards</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">card</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span>
-            <span class="n">heart_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">heart_count</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
-                <span class="n">win_heart</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-        <span class="k">elif</span> <span class="n">card</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span>
-            <span class="n">spade_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">spade_count</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
-                <span class="n">win_spade</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-        <span class="k">elif</span> <span class="n">card</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span>
-            <span class="n">diamond_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">diamond_count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">win_diamond</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">club_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">club_count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">lose</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section ><div id="cell-id=8a196cbd" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">win_heart</span><span class="o">/</span><span class="mi">10000</span><span class="p">,</span>
-      <span class="n">win_spade</span><span class="o">/</span><span class="mi">10000</span><span class="p">,</span>
-      <span class="n">win_diamond</span><span class="o">/</span><span class="mi">10000</span><span class="p">,</span>
-      <span class="n">lose</span><span class="o">/</span><span class="mi">10000</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.0586 0.1594 0.3903 0.3917
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section></section>
 </div>
 </div>
