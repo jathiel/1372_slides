@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>08-Conditional_Independence slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>09-Counting slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -15176,107 +15176,48 @@ div.jp-OutputPrompt {
 
 <div class="reveal">
 <div class="slides"><section ><section >
-<div id="cell-id=33a39c3b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=3baa26ac" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Conditional-Probabilities-and-Independence">Conditional Probabilities and Independence<a class="anchor-link" href="#Conditional-Probabilities-and-Independence">&#182;</a></h1>
+<h1 id="Counting-Principles">Counting Principles<a class="anchor-link" href="#Counting-Principles">&#182;</a></h1>
 </div>
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=1629c9a1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=60e793b4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The <strong>conditional probability of $B$ given that $A$ has occurred</strong> is denoted by $P(B|A)$ and denotes the probabilty that an event $B$ occurs <em>given that we know that $A$ has occurred</em>.</p>
-<p>For example, suppose that you flip a fair coin twice.</p>
-<ol>
-<li><p>What is the probability that you flip two heads?</p>
-</li>
-<li><p>What is the probability that you flip two heads given that the first flip was heads?</p>
-</li>
-</ol>
-<p>Note that the answer to the second question is not the same as the first. Why?</p>
+<h2 id="Generalized-Basic-Principle-of-Counting">Generalized Basic Principle of Counting<a class="anchor-link" href="#Generalized-Basic-Principle-of-Counting">&#182;</a></h2><p>Suppose an experiment consists of $r$ parts. If there are $n_1$ possible outcomes for part 1, $n_2$ possible outcomes for part 2, and so on, then there are $n_1\cdot n_2\cdot\cdots\cdot n_r$ possible outcomes for the experiment.</p>
 
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=5c206aab" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To get a formula for $P(B|A)$ when all outcomes are equally likely, we have to count all of the possible outcomes in $B$ that are also in $A$, and divide that by all of the possible outcomes that are in $A$ (since we know $A$ has occurred). That is,</p>
-$$\begin{align*}
- P(B|A) &amp;= \frac{\text{# of events in that are in $B$ and $A$}}{\text{# of events in that are in $A$}}\\
- &amp;= \frac{\text{# of events in that are in $B$ and $A$}}{\text{# of all possible events}}\cdot\frac{\text{# of all possible events}}{\text{# of events in that are in $A$}}\\
- &amp;= \frac{P(A\cap B)}{P(A)}.
- \end{align*}
-$$<p>This formula holds even when all of the events are not equally likely. We are computing a probability <em>relative</em> to another.</p>
-
-</div>
-</div>
-</div>
-</div></section><section >
-<div id="cell-id=9316b459" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=c1745d21" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h2><ol>
-<li><p>Suppose that you roll two fair 6-sided dice. What is the probability that the dice will sum up to 9 given that <em>exactly</em> one of the dice came out as a 3?</p>
+<li><p>Suppose you have 3 shirts, 3 pairs of pants, 5 pairs of socks, and 2 pairs of shoes. How many different outfits do you have?</p>
 </li>
-<li><p>Suppose that you draw a card from a standard 52-card deck. What is the probability that the card is an ace given that the card is red?</p>
+<li><p>License plates in NY are made up of 3 letters and 4 numbers. Assuming there are no restrictions, how many possible license plates are available?</p>
 </li>
-<li><p>Use the table below about a Covid-19 study's experimental testing results to answer the following question. What is the probability that a randomly selected person from the study has Covid-19 given that the experimental test result is positive?</p>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>+ Result</th>
-  <th>- Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Has Covid-19</td>
-  <td>30</td>
-  <td>20</td>
-</tr>
-<tr>
-  <td>Does Not Have Covid-19</td>
-  <td>15</td>
-  <td>335</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=ea073fb4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Kahneman-Tversky">Kahneman-Tversky<a class="anchor-link" href="#Kahneman-Tversky">&#182;</a></h2><p>Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations.</p>
-<p>What is more likely?</p>
+<li><p>The North American numbering plan (NANP) specifies that a telephone number consists of 10 digits, consisting of a three-digit area code, a three-digit office code, and a four-digit station code.  There are some restrictions on the digits.</p>
 <ol>
-<li><p>Linda is a bank teller.</p>
-</li>
-<li><p>Linda is a bank teller and is active in the feminist movement.</p>
+<li>Let X denote a digit from 0 through 9.</li>
+<li>Let N denote a digit from 2 through 9.</li>
+<li>Let Y denote a digit that is  0 or 1.</li>
+<li>The format for numbers is NYX-NNX-XXX.</li>
+</ol>
+<p>How many different telephone numbers are possible under this format?</p>
 </li>
 </ol>
 
@@ -15284,281 +15225,94 @@ $$<p>This formula holds even when all of the events are not equally likely. We a
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=2b01b8ab" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=4b7f4e9d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Multiplication-Rule">Multiplication Rule<a class="anchor-link" href="#Multiplication-Rule">&#182;</a></h2>$$P(A\cap B) = P(A)\cdot P(B|A)$$
-</div>
-</div>
-</div>
-</div></section><section >
-<div id="cell-id=a12606f5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h2><ol>
-<li><p>A child has 12 socks in a drawer; 5 are red, 4 are blue, and 3 are green. If 2 socks are chosen at random, compute the following probabilities:</p>
-<ol>
-<li><p>Both socks are red.</p>
-</li>
-<li><p>Both socks are of the same color.</p>
-</li>
-</ol>
-</li>
-<li><p>Suppose that you draw two cards (without replacement) from a standard deck of cards. What is the probability that both cards are aces?</p>
-</li>
-<li><p>An urn initially contains 4 white and 6 black balls. Each time a ball is drawn, its color is noted and then it is replaced in the urn along with another ball of the same color. What is the probability that the first 2 balls drawn are black?</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=05503723" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Independence">Independence<a class="anchor-link" href="#Independence">&#182;</a></h2><p>We say that two events are <strong>independent</strong> if $$P(A\cap B) = P(A)\cdot P(B).$$</p>
-<p>Note that from the multiplication rule, $P(A\cap B) = P(A)\cdot P(B|A)$. So events being independent means that $P(B|A)=P(B)$. That means that knowing that $A$ has occurrued does not affect the probability of $B$ occurring (and vice versa).</p>
+<h2 id="Permutations">Permutations<a class="anchor-link" href="#Permutations">&#182;</a></h2><p>Suppose you have $n$ objects and you want to count the number of ways you can <strong>permute</strong> (rearrange) them. For the first object you have $n$ choices, for the second you have $n-1$ choices, for the third you have $n-2$ choices, and so on. So the number of ways to get a <strong>permutation</strong> of $n$ objects is $$n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot 2\cdot 1.$$</p>
+<p>We define $n$-factorial as $$n! = n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot 2\cdot 1$$ for positive integers and $0!=1$.</p>
 
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=1b0d00db" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=4893ca31" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h2><ol>
-<li><p>Suppose that you draw two cards (with replacement) from a standard deck of cards. What is the probability that both cards are aces?</p>
-</li>
-<li><p>Suppose you roll a fair 6-sided until you encounter a 1 for the first time. What is the probability that you need to roll the die at least 4 times?</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=b0c335c1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Penney's-Game">Penney's Game<a class="anchor-link" href="#Penney's-Game">&#182;</a></h2><p>Suppose two players, A and B, play a game where each player chooses a series of 3 coin flips (of a fair coin). The players then begin flipping a coin until three consecutive flips, in order, match one of the player's choices. The matching player is the winner.</p>
-<ol>
-<li><p>If player A chooses $HHH$ and player B chooses $THH$, who is more likely to win the game?</p>
-</li>
-<li><p>If player A chooses $HHT$ and player B chooses $HTH$, who is more likely to win the game?</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=a4258be5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Bayes'-Theorem">Bayes' Theorem<a class="anchor-link" href="#Bayes'-Theorem">&#182;</a></h2>$$
+<h2 id="Generalized-Permutation">Generalized Permutation<a class="anchor-link" href="#Generalized-Permutation">&#182;</a></h2><p>Suppose you have $n$ objects and you want the count the number of ways you can permute $r$ of them, with $1\leq r\leq n$. Then you have $n$ choices for the first, $n-1$ choices for the second, and so on until you have $n-r+1$ choices for the $r$th object. So the number of ways to get a permutation of $r$ objects out of a set of $n$ objects is</p>
+$$
 \begin{align*}
-P(A|B) &amp;= \frac{P(A)\cdot P(B|A)}{P(B)}\\
-&amp;= \frac{P(A)\cdot P(B|A)}{P(B|A)\cdot P(A) + P(B|A^c)\cdot P(A^c)}
-\end{align*}$$
+P(n,r) &amp;= n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot (n-r+1)\\
+&amp;= \frac{n\cdot(n-1)\cdot(n-2)\cdot\cdots\cdot 2\cdot 1}{(n-r)\cdot(n-r-1)\cdot(n-r-2)\cdot\cdots\cdot 2\cdot 1}\\
+&amp;= \frac{n!}{(n-r)!}.
+\end{align*}
+$$
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=0e2d20dd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=fb9b547f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Detecting-Spam">Detecting Spam<a class="anchor-link" href="#Detecting-Spam">&#182;</a></h2><p>Suppose you know the following:</p>
-<ol>
-<li><p>60% of all of your emails are spam</p>
+<h2 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h2><ol>
+<li><p>Suppose 10 runners participate in a race. In how many ways can the runners finish the race? (Assume no ties.)</p>
 </li>
-<li><p>20% of spam emails have the word &quot;dear&quot;</p>
+<li><p>In the same race as above, in how many ways can the runners attain a podium finish? (Gold, silver, bronze.)</p>
 </li>
-<li><p>1% of all non-spam emails have the word &quot;dear&quot;</p>
+<li><p>How many 3-letter strings can you form with the letters $ABCDEFGH$ if you are not allowed to reuse letters?</p>
+</li>
+<li><p>How many permutations of the letters $ABCDEFGH$ contain the string $ABC$?</p>
 </li>
 </ol>
-<p>If you receive an email with the word &quot;dear&quot; in it, what is the probability that it is spam?</p>
 
 </div>
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=5c8a7c5c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=c8e38805" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="A-single-winner">A single winner<a class="anchor-link" href="#A-single-winner">&#182;</a></h2><p>Suppose that two people play a game by flipping a fair coin each, simultaneously. Anyone that flips tails is eliminated from the game and the remaining players play another round until everyone is eliminated. What is the probability that in the final round before all players are eliminated, only one player was left?</p>
-<p>What if three people play this game?</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=a2e0c887" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="The-dreidel-game">The dreidel game<a class="anchor-link" href="#The-dreidel-game">&#182;</a></h2><p>How long does it take the dreidel game to finish when there are 3 players that start with 10 chocolate coins?</p>
+<h2 id="Combinations">Combinations<a class="anchor-link" href="#Combinations">&#182;</a></h2><p>Suppose you have $n$ objects and you want to count the number of ways you can select $r$ of them, with $1\leq r\leq n$, where order does not matter. This would be the same as taking all of the permutations of $r$ objects out of $n$ and dividing by the number of ways you can permute $r$ objects. So the number of ways to get a <strong>combination</strong> of $r$ objects out of a set of $n$ objects is</p>
+$$
+\begin{align*}
+C(n,r) &amp;= \frac{P(n,r)}{r!}\\
+&amp;= \frac{n!}{r!(n-r)!}.
+\end{align*}
+$$<p>We often say $n$ <strong>choose</strong> $r$ for this quantity and denote it by ${n}\choose{r}$.</p>
 
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=f0e85e5b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=371cd10d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><a href="https://towardsdatascience.com/dreidel-analytics-moneyball-for-ancient-gambling-5a0142a11097">Simulations</a>!</p>
+<h2 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h2><ol>
+<li><p>Suppose that you have 7 individuals. In how many ways can you form a subgroup of 3 selected from the original set of 7?</p>
+</li>
+<li><p>Suppose you have 5 computer science students and 4 applied math students. In how many ways can you form a group containing 2 students in computer science and 2 students in applied math?</p>
+</li>
+<li><p>Suppose you have an urn with 7 red balls and 5 black balls. You select 5 balls at random. What is the probability that 3 of them will be red and 2 of them will be black?</p>
+</li>
+</ol>
 
 </div>
 </div>
 </div>
-</div></section></section><section ><section >
-<div id="cell-id=1480210b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Race-to-the-finish">Race to the finish<a class="anchor-link" href="#Race-to-the-finish">&#182;</a></h2><p>Are you more likely to win a prize or the zonk on <a href="https://www.youtube.com/watch?v=NJpWwhcKvHY">Race to the Finish</a>?</p>
-
-</div>
-</div>
-</div>
-</div></section><section ><div id="cell-id=cf018a2a" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">,</span><span class="s1">&#39;4&#39;</span><span class="p">,</span><span class="s1">&#39;5&#39;</span><span class="p">,</span><span class="s1">&#39;6&#39;</span><span class="p">,</span><span class="s1">&#39;7&#39;</span><span class="p">,</span><span class="s1">&#39;8&#39;</span><span class="p">,</span><span class="s1">&#39;9&#39;</span><span class="p">,</span><span class="s1">&#39;10&#39;</span><span class="p">,</span><span class="s1">&#39;J&#39;</span><span class="p">,</span><span class="s1">&#39;Q&#39;</span><span class="p">,</span><span class="s1">&#39;K&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
-<span class="n">suits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
-<span class="n">cards</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">suits</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">])</span>
-
-<span class="n">win_heart</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">win_spade</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">win_diamond</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">lose</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section ><div id="cell-id=0f5b3593" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
-    <span class="n">heart_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">spade_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">diamond_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">club_count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">cards</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">card</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span>
-            <span class="n">heart_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">heart_count</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
-                <span class="n">win_heart</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-        <span class="k">elif</span> <span class="n">card</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span>
-            <span class="n">spade_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">spade_count</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
-                <span class="n">win_spade</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-        <span class="k">elif</span> <span class="n">card</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span>
-            <span class="n">diamond_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">diamond_count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">win_diamond</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">club_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">club_count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">lose</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section ><div id="cell-id=a47c529b" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">win_heart</span><span class="o">/</span><span class="mi">10000</span><span class="p">,</span>
-      <span class="n">win_spade</span><span class="o">/</span><span class="mi">10000</span><span class="p">,</span>
-      <span class="n">win_diamond</span><span class="o">/</span><span class="mi">10000</span><span class="p">,</span>
-      <span class="n">lose</span><span class="o">/</span><span class="mi">10000</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.0536 0.1614 0.3993 0.3857
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section></section>
 </div>
 </div>
