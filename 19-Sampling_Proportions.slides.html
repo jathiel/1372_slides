@@ -15200,7 +15200,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=cc8d4623" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=f0974e72" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15214,7 +15214,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=02fb83a3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=40cc9263" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15226,21 +15226,21 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=fc820776" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=dcb2aff6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>However,
-$$P\{X_2=1|X_1=0\}=\frac{425}{1,473}\approx0.2885$$ and $$P\{X_2=1|X_1=1\}=\frac{424}{1,474}\approx0.2877.$$ This happens because the population size of $1,474$ is much larger than our sample size of $2.$</p>
+$$P\{X_2=1|X_1=0\}=\frac{425}{1,473}\approx0.2885$$ and $$P\{X_2=1|X_1=1\}=\frac{424}{1,473}\approx0.2878.$$ This happens because the population size of $1,474$ is much larger than our sample size of $2.$</p>
 <p>In general, as long as the population size $N$ is much larger than the sample size $n$, we can treat the $X_i$s as effectively independent, so their sum $X$ acts like a binomial distribution. In fact, we will assume that this is the case.</p>
 
 </div>
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=d072e532" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=dd476df9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15252,7 +15252,7 @@ $$P\{X_2=1|X_1=0\}=\frac{425}{1,473}\approx0.2885$$ and $$P\{X_2=1|X_1=1\}=\frac
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=093f202d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=70685740" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15264,7 +15264,7 @@ $$P\{X_2=1|X_1=0\}=\frac{425}{1,473}\approx0.2885$$ and $$P\{X_2=1|X_1=1\}=\frac
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=e34ac1c4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=2541a746" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15277,6 +15277,169 @@ $$P\{X_2=1|X_1=0\}=\frac{425}{1,473}\approx0.2885$$ and $$P\{X_2=1|X_1=1\}=\frac
 <li><p>What is the probability that between $36$ to $42$ of them do not own a car?</p>
 </li>
 </ol>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div id="cell-id=2515bef0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Addendum">Addendum<a class="anchor-link" href="#Addendum">&#182;</a></h2><p>To compute the probabilities from the previous slide, we can use one of two strategies:</p>
+<ol>
+<li><p>Use the $\verb|sp.stats.norm|$ functions for a normal distribution approximation that requires that we make a small adjustment to improve the accuracy. The so-called <em>continuity correction</em>.</p>
+</li>
+<li><p>Use the $\verb|sp.stats.binom|$ functions for a binomial distribution. (Recommended. See the updated reference page.)</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></section><section ><div id="cell-id=ca085d73" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="fragment" ><div id="cell-id=79c9a71e" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">45</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="mi">150</span><span class="o">*</span><span class="mf">0.26</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">150</span><span class="o">*</span><span class="mf">0.26</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mf">0.26</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>np.float64(0.15296520880309927)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment" ><div id="cell-id=01f75366" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="mi">150</span><span class="o">*</span><span class="mf">0.26</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">150</span><span class="o">*</span><span class="mf">0.26</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mf">0.26</span><span class="p">))</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>np.float64(0.1320247029921433)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment" ><div id="cell-id=7a28df98" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">binom</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">44</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mf">0.26</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>np.float64(0.15304105695779346)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div></section><section >
+<div id="cell-id=89f93eb3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a href="https://www.desmos.com/calculator/frxgmpuxub">Continuity Correction Illustrated</a></p>
 
 </div>
 </div>
