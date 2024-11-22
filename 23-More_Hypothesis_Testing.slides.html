@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>22-Hypothesis_Testing slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>23-More_Hypothesis_Testing slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
@@ -15176,96 +15176,52 @@ div.jp-OutputPrompt {
 
 <div class="reveal">
 <div class="slides"><section ><section >
-<div id="cell-id=83b4ffa4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=ce1c3f02" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Hypothesis-Testing">Hypothesis Testing<a class="anchor-link" href="#Hypothesis-Testing">&#182;</a></h1>
+<h1 id="More-Hypothesis-Testing">More Hypothesis Testing<a class="anchor-link" href="#More-Hypothesis-Testing">&#182;</a></h1>
 </div>
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=64f74ca0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=599b2451" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="An-Example">An Example<a class="anchor-link" href="#An-Example">&#182;</a></h2><p>Historical data indicate that household water use tends to be normally distributed with a mean of 360 gallons and a standard deviation of 40 gallons per day. To see if this is still the situation, a random sample of 200 households was chosen. The average daily water use in these households was then seen to equal 374 gallons per day.</p>
-<p>Are these data consistent with the historical distribution?</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=8fffa2eb" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Definitions">Definitions<a class="anchor-link" href="#Definitions">&#182;</a></h2><p>A <strong>statistical hypothesis</strong> is a statement about the nature of a population. It is often stated in terms of a population parameter.</p>
-<p>The <strong>null hypothesis</strong>, denoted $H_0$, is a statement about a population parameter. The <strong>alternative hypothesis</strong> is denoted by $H_1$. The null hypothesis is rejected if it appears to be inconsisten with the sample data and will not be rejected otherwise.</p>
-<p>A <strong>test statistic</strong> is a statistic whose value is determined from the sample data. The value of the test statistic will determine if the null hypothesis is rejected or not.</p>
-<p>The <strong>critical</strong> or <strong>rejection region</strong> is the set of values of the test statistic for which the null hypothesis is rejected.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=4dafc603" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Return-to-the-example">Return to the example<a class="anchor-link" href="#Return-to-the-example">&#182;</a></h2><p>We want to find out whether or not $\mu=360$ is still true. So we can define $$H_0: \mu = 360$$ and $$H_1: \mu\neq 360.$$</p>
-<p>To reject $H_0$, we would need some evidence that it is unlikely to be true. One way to do this is to compare our sample mean to 360. If it differs by 'a lot,' we should reject $H_0$. What do we mean by 'a lot' here?</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=08658fe7" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Test-concerning-the-mean-of-a-normal-population-when-the-variance-is-known">Test concerning the mean of a normal population when the variance is known<a class="anchor-link" href="#Test-concerning-the-mean-of-a-normal-population-when-the-variance-is-known">&#182;</a></h2><p>If the variance of the population, $\sigma^2$, is known, we know that for large $n$, $$Z=\frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}$$ is approximately distributed like the standard normal.</p>
-<p>A <strong>significance-level-$\alpha$ test</strong> of the null hypothesis that the population mean is equal to the specified value $\mu_0$ against the alternative that it is not is to reject the null hypothesis (two-tailed test) if: $$\frac{\sqrt{n}}{\sigma}|\overline{X}-\mu_0| \geq z_{\alpha/2}.$$</p>
-<p>For example, when $\alpha = 0.05$, we reject the null hypothesis if $$\frac{\sqrt{n}}{\sigma}|\overline{X}-\mu_0|\geq 1.96.$$ Recall that $z_{0.025} \approx 1.96.$</p>
+<h2 id="Test-concerning-the-mean-of-a-normal-population-when-the-variance-is-unknown">Test concerning the mean of a normal population when the variance is unknown<a class="anchor-link" href="#Test-concerning-the-mean-of-a-normal-population-when-the-variance-is-unknown">&#182;</a></h2><p>If the variance of the normally distributed population, $\sigma^2$, is unknown, we know that $$T_{n-1}=\frac{\overline{X}-\mu_0}{S/\sqrt{n}}$$ is random variable with a Student's $t$-distribution with $n-1$ degrees of freedom, where $n$ is the sample size.</p>
+<p>A <strong>significance-level-$\alpha$ test</strong> of the null hypothesis that the population mean is equal to the specified value $\mu_0$ against the alternative that it is not is to reject the null hypothesis (two-tailed test) if: $$\frac{\sqrt{n}}{S}|\overline{X}-\mu_0| \geq t_{n-1,\alpha/2}.$$</p>
 
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=76f62c5a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=dea29364" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Hypothesis-test-regions-(two-tailed)">Hypothesis test regions (two-tailed)<a class="anchor-link" href="#Hypothesis-test-regions-(two-tailed)">&#182;</a></h2><p><img src="rejection_22.png" alt="Rejection region" /></p>
+<h2 id="Hypothesis-test-regions-(two-tailed)">Hypothesis test regions (two-tailed)<a class="anchor-link" href="#Hypothesis-test-regions-(two-tailed)">&#182;</a></h2><p><img src="rejection_23.png" alt="Rejection Region" /></p>
 
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=1b99be39" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=12c7c4aa" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Some-comments-on-testing">Some comments on testing<a class="anchor-link" href="#Some-comments-on-testing">&#182;</a></h2><ol>
-<li><p>Two types of errors can occur when hypothesis testing. If you reject the null hypothesis $H_0$ when it is true, this is a <strong>type I</strong> error. If you fail to reject the null hypothesis $H_0$ when it is false, it is a <strong>type II</strong> error.</p>
+<h2 id="Some-Comments">Some Comments<a class="anchor-link" href="#Some-Comments">&#182;</a></h2><ol>
+<li><p>Just as in the previous case, we can also have one-tailed tests (a summary table appears in the next slide).</p>
 </li>
-<li><p>Typically, you select the significance level in advance. Common values are $\alpha = 0.10, 0.05,$ and $0.01$. The idea being that you would reject $H_0$ when $H_0$ is true with some small probability $\alpha$.</p>
-</li>
-<li><p>The null hypotheis $H_0$ is rejected on the basis of the data collected. So if you are trying to establish some hypothesis, what you are trying to establish should be your alternative hypothesis $H_1$. If you are trying to discredit a hypothesis, it should be your null hypothesis $H_0$.</p>
+<li><p>The definition of a p value continues to hold in this case as well. It is the smallest significance level at which the data lead to a rejection of the null hypothesis.</p>
 </li>
 </ol>
 
@@ -15273,109 +15229,44 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=9c604ebe" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=ae0dbaab" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Returning-(again)-to-the-example">Returning (again) to the example<a class="anchor-link" href="#Returning-(again)-to-the-example">&#182;</a></h2><p>Choosing $\alpha = 0.05$, we have that we will reject $H_0$ if $$\frac{\sqrt{200}}{40}|\overline{X}-360|\geq 1.96.$$ Since $\overline{X}=374$, we see that we do have to reject the null hypothesis.</p>
-<p>So at the $5$ percent significance level, we have determined that the data collected does not support the historical distribution.</p>
-<p>Note: It <em>is</em> possible that the true mean is $360$ despite the observed data. What we have shown is that this has at most a $5\%$ chance of occuring.</p>
+<h2 id="Hypothesis-tests-summary">Hypothesis tests summary<a class="anchor-link" href="#Hypothesis-tests-summary">&#182;</a></h2><p><img src="test_table_23.png" alt="Test table" /></p>
 
 </div>
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=8a8caf43" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="p-Values">p Values<a class="anchor-link" href="#p-Values">&#182;</a></h2><p>The <strong>p value</strong> is the smallest significance level at which the data lead to a rejection of the null hypothesis. It gives the probability that the data would <em>not</em> support $H_0$ despite it being true. A small p value would mean that it is unlikely that the observed data would occur despite $H_0$ being true. So small p values (like $0.05$) would be evidence that $H_0$ is false.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=16facd7c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Returning-(again-again)-to-the-example">Returning (again again) to the example<a class="anchor-link" href="#Returning-(again-again)-to-the-example">&#182;</a></h2><p>Since $$\frac{\sqrt{200}}{40}|374-360|\approx 4.95,$$ the p value is given by $$P\bigg\{\frac{\sqrt{n}}{\sigma}|\overline{X}-\mu_0|\geq 4.95\bigg\} = P\{|Z|\geq 4.95\} = 2P\{Z\geq 4.95\} \approx 7.4\times 10^{-7}.$$ This means that it is extremely unlikely that we observe this data given that the historical mean is still holds.</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=0b0b5544" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="One-tailed-tests">One-tailed tests<a class="anchor-link" href="#One-tailed-tests">&#182;</a></h2><p>The previous test discussed is used if we want to reject the null hypothesis if $\overline{X}$ is either too large or too small. But we can also look at the case where we want to reject the null hypothesis if $\overline{X}$ is only too small (or only too large). For example, we could test $$H_0: \mu \leq \mu_0$$ against $$H_1: \mu &gt; \mu_0.$$</p>
-<p>In this case we need to make some small adjustments in our rejection region.</p>
-
-</div>
-</div>
-</div>
-</div></section><section >
-<div id="cell-id=0d22c126" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Hypothesis-test-regions-(one-tailed)">Hypothesis test regions (one-tailed)<a class="anchor-link" href="#Hypothesis-test-regions-(one-tailed)">&#182;</a></h2><p><img src="rejection_one_22.png" alt="Rejection region" /></p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=35802ec8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Hypothesis-tests-summary">Hypothesis tests summary<a class="anchor-link" href="#Hypothesis-tests-summary">&#182;</a></h2><p><img src="test_table_22.png" alt="Test table" /></p>
-<p>My suggestion to you: When in doubt, draw a picture!</p>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=65561d45" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=00c10ea5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h2><ol>
-<li>A leasing firm operates on the assumption that the annual number of miles driven in its leased cars is normally distributed with mean 13,500 and standard deviation 4000 miles. To see whether this assumption is valid, a random sample of 36 one-year-old cars has been checked. What conclusion can you draw if the average mileage on these 36 cars is 15,233?</li>
+<li>There is some variability in the amount of phenobarbital in each capsule sold by a manufacturer. However, the manufacturer claims that the mean value is 20.0 milligrams. To test this, a sample of 25 pills yielded a sample mean of 19.7 with a sample standard deviation of 1.3. What inference would you draw from these data? In particular, are the data strong enough evidence to discredit the claim of the manufacturer? Use the 5 percent level of significance.</li>
 </ol>
 
 </div>
 </div>
 </div>
-</div>
-<div id="cell-id=85edc9da" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div></section><section >
+<div id="cell-id=7a8238f1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Problem-1">Problem 1<a class="anchor-link" href="#Problem-1">&#182;</a></h2><p>We begin with our assumptions:  $$H_0: \mu = 13,500$$ and $$H_1: \mu \neq 13,500.$$</p>
-<p>We can obtain the p value by computing: $$P\bigg\{|Z|\geq \frac{\sqrt{36}}{4,000}|15,233-13,500|\bigg\}.$$</p>
+<h2 id="Problem-1">Problem 1<a class="anchor-link" href="#Problem-1">&#182;</a></h2><p>We let $$H_0: \mu = 20.0$$ and $$H_1: \mu\neq 20.0.$$ We reject the null hypothesis if $\frac{\sqrt{25}}{1.3}|19.7-20.0|\geq t_{24,0.025}.$</p>
 
 </div>
 </div>
 </div>
-</div><div id="cell-id=f7cb9cdc" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment" ><div id="cell-id=4367db78" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15385,9 +15276,13 @@ div.jp-OutputPrompt {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
 
-<span class="n">val</span> <span class="o">=</span> <span class="p">(</span><span class="mi">36</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="mi">4000</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="mi">15233</span><span class="o">-</span><span class="mi">13500</span><span class="p">)</span>
+<span class="n">mu0</span> <span class="o">=</span> <span class="mf">20.0</span>
+<span class="n">X_bar</span> <span class="o">=</span> <span class="mf">19.7</span>
+<span class="n">S</span> <span class="o">=</span> <span class="mf">1.3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">25</span>
 
-<span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Test statistic value: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="n">S</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">X_bar</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mu0</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;T-value: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.975</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15401,66 +15296,49 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputArea-child">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>np.float64(0.009335967848861815)</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Test statistic value: 1.1538
+T-value: 2.0639
+</pre>
 </div>
-
-</div>
-
 </div>
 
 </div>
 
 </div>
-<div id="cell-id=7b7edf4c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This is a small p value, so we would reject the null hypothesis at the 1 percent level of significance.</p>
 
-</div>
-</div>
-</div>
-</div>
-<div id="cell-id=ec353442" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div></div></section><section >
+<div id="cell-id=4e153fef" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol start="2">
-<li>To test the hypothesis $$H_0: \mu =105$$ against $$H_1: \mu\neq 105$$ a sample of size 9 is chosen. If the sample mean is $\overline{X} = 100$, find the p value if the population standard deviation is known to be the following value below. In which cases would the null hypothesis be rejected at the 5 percent level of significance? What about at the 1 percent level?<ol>
-<li>$\sigma = 5$</li>
-<li>$\sigma = 10$</li>
-<li>$\sigma = 15$</li>
-</ol>
-</li>
+<li>A water official insists that the average daily household water use in a certain county is at least 400 gallons. To check this claim, a random sample of 25 households was checked. The average of those sampled was 367 with a sample standard deviation of 62. Is this consistent with the official’s claim?</li>
 </ol>
 
 </div>
 </div>
 </div>
-</div>
-<div id="cell-id=9a03541a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div></section><section >
+<div id="cell-id=af98e1d2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Problem-2">Problem 2<a class="anchor-link" href="#Problem-2">&#182;</a></h2>
+<h2 id="Problem-2">Problem 2<a class="anchor-link" href="#Problem-2">&#182;</a></h2><p>We let $$H_0: \mu \geq 400$$ and $$H_1: \mu&lt; 400.$$</p>
+
 </div>
 </div>
 </div>
-</div><div id="cell-id=5e367c79" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment" ><div id="cell-id=9c33c445" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15468,13 +15346,12 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mu0</span> <span class="o">=</span> <span class="mi">105</span>
-<span class="n">X_bar</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">9</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mu0</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">X_bar</span> <span class="o">=</span> <span class="mi">367</span>
+<span class="n">S</span> <span class="o">=</span> <span class="mi">62</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">25</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p value when sd is 5: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="mi">5</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">X_bar</span><span class="o">-</span><span class="n">mu0</span><span class="p">))),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p value when sd is 10: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="mi">10</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">X_bar</span><span class="o">-</span><span class="n">mu0</span><span class="p">))),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p value when sd is 15: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="mi">15</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">X_bar</span><span class="o">-</span><span class="n">mu0</span><span class="p">))),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;p value: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="n">S</span><span class="o">*</span><span class="p">(</span><span class="n">X_bar</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mu0</span><span class="p">),</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15494,9 +15371,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>p value when sd is 5: 0.0027
-p value when sd is 10: 0.1336
-p value when sd is 15: 0.3173
+<pre>p value: 0.0068
 </pre>
 </div>
 </div>
@@ -15505,45 +15380,39 @@ p value when sd is 15: 0.3173
 
 </div>
 
-</div>
-<div id="cell-id=a3909dd0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Reject the null hypothesis at the 5 percent significance level when $\sigma = 5$. The same holds at the 1 percent significance level.</p>
-
-</div>
-</div>
-</div>
-</div></section><section >
-<div id="cell-id=9f801b81" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div></div></section><section >
+<div id="cell-id=3009e2fb" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol start="3">
-<li>An advertisement for a toothpaste claims that use of the product significantly reduces the number of cavities of children in their cavity-prone years. Cavities per year for this age group are normal with mean 3 and standard deviation 1. A study of 2500 children who used this toothpaste found an average of 2.95 cavities per child. Assume that the standard deviation of the number of cavities of a child using this new toothpaste remains equal to 1. Are these data strong enough, at the 5 percent level of significance, to establish the claim of the toothpaste advertisement?</li>
+<li>A car is advertised as getting at least 31 miles per gallon in highway driving on trips of at least 100 miles. Suppose the miles per gallon obtained in 8 independent experiments (each consisting of a nonstop highway trip of 100 miles) are $$28, 29, 31, 27, 30, 35, 25, 29$$<ol>
+<li>If we want to check if these data disprove the advertising claim, what should we take as the null hypothesis?</li>
+<li>What is the alternative hypothesis?</li>
+<li>Is the claim disproved at the 5 percent level of significance?</li>
+<li>What about at the 1 percent level?</li>
+</ol>
+</li>
 </ol>
 
 </div>
 </div>
 </div>
 </div></section><section >
-<div id="cell-id=ef397f78" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=6c72c34d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Problem-3">Problem 3<a class="anchor-link" href="#Problem-3">&#182;</a></h2><p>We begin with our assumptions:  $$H_0: \mu &gt; 3$$ and $$H_1: \mu \leq 3.$$</p>
+<h2 id="Problem-3">Problem 3<a class="anchor-link" href="#Problem-3">&#182;</a></h2><p>We let $$H_0: \mu \geq 31$$ and $$H_1: \mu&lt; 31.$$ Given a value of $\alpha,$ we reject the null hypothesis if $\frac{\sqrt{8}}{S}(\overline{X}-31)\leq -t_{7,\alpha}.$</p>
 
 </div>
 </div>
 </div>
-</div><div class="fragment" ><div id="cell-id=7186b7cf" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment" ><div id="cell-id=bbc09a0e" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15551,15 +15420,17 @@ p value when sd is 15: 0.3173
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mu0</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">X_bar</span> <span class="o">=</span> <span class="mf">2.95</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">2500</span>
-<span class="n">sd</span> <span class="o">=</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">z_sig</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">29</span><span class="p">])</span>
+<span class="n">mu0</span> <span class="o">=</span> <span class="mi">31</span>
+<span class="n">X_bar</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">8</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;z_alpha = </span><span class="si">{</span><span class="o">-</span><span class="n">z_sig</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;TS = </span><span class="si">{</span><span class="n">n</span><span class="o">*</span><span class="mf">0.5</span><span class="o">/</span><span class="n">sd</span><span class="o">*</span><span class="p">(</span><span class="n">X_bar</span><span class="o">-</span><span class="n">mu0</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Test statistic value: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="o">/</span><span class="n">S</span><span class="o">*</span><span class="p">(</span><span class="n">X_bar</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mu0</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;T-value at alpha = 0.05: </span><span class="si">{</span><span class="o">-</span><span class="nb">round</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;T-value at alpha = 0.01: </span><span class="si">{</span><span class="o">-</span><span class="nb">round</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.99</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15579,8 +15450,9 @@ p value when sd is 15: 0.3173
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>z_alpha = -1.6448536269514722
-TS = -62.49999999999978
+<pre>Test statistic value: -1.6699
+T-value at alpha = 0.05: -1.8946
+T-value at alpha = 0.01: -2.998
 </pre>
 </div>
 </div>
@@ -15589,18 +15461,6 @@ TS = -62.49999999999978
 
 </div>
 
-</div></div><div class="fragment" >
-<div id="cell-id=91aac172" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We should reject the null hypothesis at the 5 percent significance level (for a one-tailed test). So the toothpaste does seem to have a cavity-reducing effect.</p>
-
-</div>
-</div>
-</div>
 </div></div></section></section>
 </div>
 </div>
